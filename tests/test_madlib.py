@@ -8,7 +8,7 @@ def test_read_template_returns_stripped_string():
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_parse_template():
     actual_stripped, actual_parts = parse_template(
         "It was a {Adjective} and {Adjective} {Noun}."
@@ -20,14 +20,14 @@ def test_parse_template():
     assert actual_parts == expected_parts
 
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_merge():
     actual = merge("It was a {} and {} {}.", ("dark", "stormy", "night"))
     expected = "It was a dark and stormy night."
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_read_template_raises_exception_with_bad_path():
 
     with pytest.raises(FileNotFoundError):
